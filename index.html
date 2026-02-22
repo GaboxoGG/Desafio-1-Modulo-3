@@ -10,18 +10,39 @@
 </head>
 
 <body>
+    
 
     <section>
         <div class="card">
-            <div class="img-card"></div>
+            <div class="img-card"><img class="pc" src="asset/img/laptop.jpg" alt="Pc_Gamer"></div>
               <h6>Laptop Gamer AMD</h6>
               <p>Precio base: $<span class="precio-inicial"></span> </p>
         
               <p>Cantidad:
-                <span class="cantidad">0</span>
-                <button 
-                >+</button>
+                <span id="numero">0</span>
                 <button
+                onclick="
+                let cantidad = document.querySelector('#numero')
+                
+                let cuenta = Number(cantidad.textContent)
+
+                let suma = cuenta + 1
+
+                cantidad.textContent = suma
+                "
+                >+</button>
+<!--resta-->
+                <button
+                onclick="
+                let cantidad2 = document.querySelector('#numero')
+                
+                let cuenta2 = Number(cantidad2.textContent)
+
+                let resta = cuenta2 - 1
+
+                cantidad2.textContent = resta
+                "
+                
                 >-</button>
               </p>
             </div>

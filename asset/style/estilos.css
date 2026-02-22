@@ -32,6 +32,11 @@ body {
     background-position: center ;
 }
 
+.pc{
+    width: 180px;
+    height: 100px;
+}
+
 .card input {
     width: 80%;
     border-radius: 5px;
