@@ -16,15 +16,13 @@
         <div class="card">
             <div class="img-card"><img class="pc" src="asset/img/laptop.jpg" alt="Pc_Gamer"></div>
               <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="PrecioInicial"></span> </p>
+              <p>Precio base: $<span class="precio-inicial"></span> </p>
         
               <p>Cantidad:
                 <span class="numero">0</span>
                 <button
                 onclick="
                 let cantidad = document.querySelector('.numero');
-
-                let ValorPc = document.querySelector('.Valor-total');
                 
                 let cuenta = Number(cantidad.textContent);
 
@@ -32,17 +30,14 @@
                 
                 cantidad.textContent = suma;
 
-                ValorPc.textContent = suma * Precio;
-              
-                
+                let total = suma * precio;
+                document.querySelector('.valor-total').textContent = total;
                 "
                 >+</button>
 <!--resta-->
                 <button
                 onclick="
                 let cantidad = document.querySelector('.numero');
-
-                let ValorPc = document.querySelector('.Valor-total');
                 
                 let cuenta2 = Number(cantidad.textContent);
 
@@ -50,7 +45,10 @@
 
                 cantidad.textContent = sustraccion;
 
-                ValorPc.textContent = sustraccion * Precio;
+                let total2 = resta * precio;
+                document.querySelector('.valor-total').textContent = total2;
+
+                
                 "
                 
                 >-</button>
@@ -64,7 +62,7 @@
         <p>Total a pagar: $<span class="valor-total">0</span> </p>
     </div>
 
-    <script src="asset/js/index.js">
+    <script src="asset/jc/index.js">
       
 
     </script>
