@@ -16,31 +16,41 @@
         <div class="card">
             <div class="img-card"><img class="pc" src="asset/img/laptop.jpg" alt="Pc_Gamer"></div>
               <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="precio-inicial"></span> </p>
+              <p>Precio base: $<span class="PrecioInicial"></span> </p>
         
               <p>Cantidad:
-                <span id="numero">0</span>
+                <span class="numero">0</span>
                 <button
                 onclick="
-                let cantidad = document.querySelector('#numero')
+                let cantidad = document.querySelector('.numero');
+
+                let ValorPc = document.querySelector('.Valor-total');
                 
-                let cuenta = Number(cantidad.textContent)
+                let cuenta = Number(cantidad.textContent);
 
-                let suma = cuenta + 1
+                let suma = cuenta + 1;
+                
+                cantidad.textContent = suma;
 
-                cantidad.textContent = suma
+                ValorPc.textContent = suma * Precio;
+              
+                
                 "
                 >+</button>
 <!--resta-->
                 <button
                 onclick="
-                let cantidad2 = document.querySelector('#numero')
+                let cantidad = document.querySelector('.numero');
+
+                let ValorPc = document.querySelector('.Valor-total');
                 
-                let cuenta2 = Number(cantidad2.textContent)
+                let cuenta2 = Number(cantidad.textContent);
 
-                let resta = cuenta2 - 1
+                let sustraccion = cuenta2 - 1;
 
-                cantidad2.textContent = resta
+                cantidad.textContent = sustraccion;
+
+                ValorPc.textContent = sustraccion * Precio;
                 "
                 
                 >-</button>
@@ -51,7 +61,7 @@
     </section>
 
     <div class="total-section">
-        <p>Total a pagar: $<span class="valor-total"></span> </p>
+        <p>Total a pagar: $<span class="valor-total">0</span> </p>
     </div>
 
     <script src="asset/js/index.js">
